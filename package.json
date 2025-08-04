@@ -1,0 +1,29 @@
+{
+  "name": "ai-tokenizer",
+  "version": "1.0.0",
+  "description": "Demo app showcasing how the texts are encoded into tokens and how they are decoded back to characters by AI Tokenizer",
+  "keywords": [
+    "ai",
+    "tokenizer",
+    "model",
+    "huggingface"
+  ],
+  "homepage": "https://github.com/devendran-m/ai-tokenizer#readme",
+  "bugs": {
+    "url": "https://github.com/devendran-m/ai-tokenizer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devendran-m/ai-tokenizer.git"
+  },
+  "license": "ISC",
+  "author": "devendran-m",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.1"
+  }
+}

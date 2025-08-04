@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AI Tokenizer</title>
+</head>
+<body>
+    <div class="header">
+        <h1>AI Tokenizer Demo</h1>        
+    </div>
+    <div class="info">
+        <p>A small demo app showcasing how the texts are encoded into tokens 
+        and how they are decoded back to characters by AI Tokenizer</p>
+        <p>This is inspired by <a target="_blank" rel="noopener" href="https://linkedin.com/in/stevekinney">Steve Kinney's</a>  <a target="_blank" rel="noopener" href="https://frontendmasters.com/workshops/python-ai/">Python: AI & Hugging Face Workshop</a> on Frontend Masters</p>
+        <p>Built using Hugging Face <a href="https://huggingface.co/models?library=transformers.js">Transformers.js</a> CDN/library and <a href="https://huggingface.co/models">Models</a> to tokenize, encode and decode text using various AI models</p>
+        <p>Steps to use the app</p>
+        <ul class="steps">
+            <li>Choose your preferred AI Model from the dropdown</li>
+            <li>Enter text in the first text area to tokenize & encode the text</li>
+            <li>Enter encoded IDs in the second text area to decode them</li>            
+        </ul>    
+    </div>
+    <div class="flex-container">
+        <div class="flex-item input-section">
+            <h2>Choose a Model</h2>
+            <select title="model-select" id="model-select" name="model-select">
+                <option value="gpt2">GPT-2</option>
+                <option value="bert-base-uncased">BERT</option>
+                <option value="roberta-base">RoBERTa</option>
+                <option value="t5-small">T5</option>            
+            </select>
+            <h2>Enter text to tokenize & encode</h2>            
+            <textarea id="encode-text" name="encode-text" rows="4" cols="50" placeholder="Enter your text here"></textarea><br>
+            <small class="help-text">Converts text by adding special tokens and converting them to IDs respective to the model chosen.</small><br>
+            <button id="tokenize-btn" type="button">Tokenize & Encode</button>            
+            <h2>Decode Tokens</h2>            
+            <textarea id="decode-tokens" name="decode-tokens" rows="4" cols="50" placeholder="Enter the encoded IDs here to decode"></textarea><br>
+            <small class="help-text">Converts encoded IDs back to text.</small><br>
+            <button id="decode-btn" type="button">Decode</button>
+        </div>
+        <div class="flex-item output-section">
+            <h3 class="model-used">Model used</h3> 
+            <h3 class="model-max-text-length">Model's max text length</h3> 
+            <h3 class="text-to-tokens">Tokenized</h3> 
+            <h3 class="encoded-text">Encoded</h3>             
+            <h3 class="decoded-tokens">Decoded</h3>        
+        </div>  
+    </div>   
+</body>
+<script type="module" src="./app.js"></script>
+<footer>
+    <p class="visitor-count" id="visitor-count"></p>
+    <p>Built by <a target="_blank" rel="noopener" href="devendran.xyz">Devendran</a></p>
+    <div class="social-links">
+        <a href="https://x.com/Zuven3" target="_blank" rel="noopener">
+            <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter" width="24" height="24";>
+        </a>
+        <a href="https://www.linkedin.com/in/mdevendran/" target="_blank" rel="noopener">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="24" height="24">
+        </a>
+        <a href="https://github.com/devendran-m" target="_blank" rel="noopener">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="24" height="24">
+        </a>
+        <a href="https://medium.com/@devconnects" target="_blank" rel="noopener">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968933.png" alt="Medium" width="24" height="24">
+        </a>
+    </div>        
+</footer>
+</html>
